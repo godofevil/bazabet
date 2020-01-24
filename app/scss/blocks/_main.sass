@@ -1,0 +1,100 @@
+.main
+    &__wrap
+        padding: 150px 0 70px 0
+        text-transform: uppercase
+        box-sizing: border-box
+    &__title
+        font-style: italic
+        padding: 0
+        line-height: .75
+        &--mobile
+            display: none
+            color: #fff
+            font-size: 61px
+            padding-bottom: 10px
+        &--1
+            font-size: 158px
+            background: linear-gradient(180deg, rgba(0,223,120,1) 0%, rgba(0,189,52,1) 70%)
+    	       -webkit-background-clip: text
+    	       -webkit-text-fill-color: transparent
+        &--2
+            color: #fff
+            font-size: 36px
+            padding: 30px 0 45px 0
+        &--3
+            color: #fff
+            font-size: 26px
+            line-height: 1.55
+        &--4
+            color: $primary-green
+            font-size: 30px
+            line-height: 1.2
+    &__mobile
+        display: none
+    &__promote
+        padding: 25px 0 25px 0
+        position: relative
+        z-index: 0
+        &::after
+            position: absolute
+            height: 100%
+            width: 100%
+            background: linear-gradient(90deg, rgba(219,255,0,0) 0%, rgba(0,0,0,0.3897934173669467) 63%)
+            content: ''
+            top: 0
+            left: -37%
+            z-index: -1
+    &__button
+        padding: 35px 60px
+        color: #242426
+        font-size: 30px
+        background: linear-gradient(180deg, rgba(250,215,113,1) 0%, rgba(233,167,26,1) 70%)
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.49),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.25)
+        border: 0
+        border-radius: 25px
+        font-family: GothamProBla
+        font-style: italic
+        cursor: pointer
+        text-transform: uppercase
+        backface-visibility: hidden
+        margin-top: 30px
+        &:hover
+            background: linear-gradient(180deg, rgba(252,228,161,1) 0%, rgba(241,198,106,1) 70%)
+
+@media (max-width: 1200px)
+    .main__wrap
+        padding: 70px 15px 40px 15px
+
+@media (max-width: 320px)
+    .main
+        &__wrap
+            display: flex
+            flex-direction: column
+            padding: 20px 30px 30px 30px
+            align-items: center
+        &__mobile
+            display: block
+        &__button
+            margin-top: 0
+            font-size: 20px
+            border-radius: 10px
+            animation: 0
+            padding: 20px 30px
+        &__promote
+            padding: 0 0 20px 0
+            margin-top: -20px
+            &::after
+                background: 0
+        &__title
+            &--mobile
+                display: block
+            &--1
+                font-size: 82px
+            &--2
+                font-size: 19px
+                padding-top: 15px
+                padding-bottom: 0
+            &--3
+                font-size: 15px
+            &--4
+                font-size: 18px

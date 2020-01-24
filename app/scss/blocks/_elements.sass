@@ -1,0 +1,79 @@
+.elements div
+    position: absolute
+
+.player
+    &__1
+        top: 35%
+        left: 6%
+    &__2
+        top: 35%
+        left: 12%
+    &__3
+        top: 34%
+        right: 12%
+    &__4
+        top: 34%
+        right: 5%
+    &__center
+        top: 26%
+        left: 41%
+        z-index: 1
+
+.ball
+    top: 50%
+    left: 40%
+    z-index: 2
+
+.truck
+    top: 18%
+    left: 45%
+
+.money
+    z-index: 2
+    &__1
+        top: 22%
+        left: 48%
+    &__2
+        top: 10%
+        left: 51%
+    &__3
+        top: 12%
+        left: 58%
+    &__4
+        top: 11%
+        left: 68%
+    &__5
+        top: 16%
+        left: 72%
+    &__6
+        top: 41%
+        left: 61%
+    &__7
+        top: 44%
+        left: 64%
+    &__8
+        top: 34%
+        left: 75%
+    &__9
+        top: 28%
+        left: 77.5%
+    &__10
+        top: 23%
+        left: 81%
+    &__11
+        top: 31%
+        left: 81%
+
+@media (max-width: 1200px)
+    .player__1,
+    .player__2,
+    .player__3,
+    .player__4
+        display: none
+        
+    .container *
+        animation: none
+
+@media (max-width: 320px)
+    .elements *
+        display: none
