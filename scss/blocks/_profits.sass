@@ -1,0 +1,34 @@
+.profits
+    &__wrap
+        padding: 40px 0 40px 0
+        display: grid
+        box-sizing: border-box
+        grid:
+            template-columns: repeat(5, 1fr)
+            column-gap: 5px
+    &__item
+        background: #262626
+        border-radius: 10px
+        padding: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        box-sizing: border-box
+    &__icon
+        padding-right: 15px
+    &__text
+        color: #fff
+        font-size: 13px
+        font-weight: 500
+        font-style: italic
+    & svg
+        fill: $primary-green
+
+@media (max-width: 320px)
+    .profits__wrap
+        padding: 25px 25px 20px 25px
+        grid:
+            template-columns: auto
+            row-gap: 5px
+    .profits__item
+        justify-content: flex-start
