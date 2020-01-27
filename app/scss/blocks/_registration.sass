@@ -10,46 +10,46 @@
         box-sizing: border-box
     &__wrap
         display: grid
+        justify-items: center
         grid:
             template-columns: repeat(5, auto)
             column-gap: 20px
-        justify-items: center
         box-sizing: border-box
-.item__number
-    position: relative
-    display: flex
-    align-items: center
-    justify-content: center
-    color: #ffc539
-    font-size: 56px
-    background: $dark-green
-    width: 70px
-    height: 70px
-    border-radius: 50%
-    z-index: 1
-    &::after
-        content: ''
-        position: absolute
-        width: 85px
-        height: 85px
-        background: transparent
-        border: 3px solid #fff
+
+.item
+    &__number
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #ffc539
+        font-size: 56px
+        background: $dark-green
+        width: 70px
+        height: 70px
         border-radius: 50%
-        z-index: -2
-
-.item__text
-    width: 200px
-    margin-left: -25px
-    padding: 30px 15px 30px 55px
-    font-size: 21px
-    color: #fff
-    text-transform: uppercase
-    background: linear-gradient(90deg, rgba(12,166,6,0) 3%, rgba(57,141,54,.8) 35%)
-    border-radius: 15px
-
-.item__steps
-    display: flex
-    align-items: center
+        z-index: 1
+        &::after
+            content: ''
+            position: absolute
+            width: 85px
+            height: 85px
+            background: transparent
+            border: 3px solid #fff
+            border-radius: 50%
+            z-index: -2
+    &__text
+        width: 200px
+        margin-left: -25px
+        padding: 30px 15px 30px 55px
+        font-size: 21px
+        color: #fff
+        text-transform: uppercase
+        background: linear-gradient(90deg, rgba(12,166,6,0) 3%, rgba(57,141,54,.8) 35%)
+        border-radius: 15px
+    &__steps
+        display: flex
+        align-items: center
 
 .arrow__3, .arrow__2
     margin-right: -10px
@@ -59,21 +59,27 @@
         grid:
             template-columns: repeat(3, 1fr)
             column-gap: 5px
-    .item__text
-        font-size: 16px
-        width: 180px
-    .item__steps
-        display: none
+    .item
+        &__text
+            font-size: 16px
+            width: 180px
+        &__steps
+            display: none
+
+@media (max-width: 960px)
+    .registration__wrap
+        justify-items: flex-start
+        padding-left: 25px
+        grid:
+            template-columns: 1fr
+            row-gap: 25px
+    .registration__item, .item__text
+        width: 100%
 
 @media (max-width: 320px)
     .registration
         background-position: top center
         background-size: contain
-        &__wrap
-            justify-items: center
-            grid:
-                template-columns: 1fr
-                row-gap: 25px
     .item
         &__text
             width: 150px

@@ -7,9 +7,13 @@
     justify-items: center
     box-sizing: border-box
 
-@media (max-width: 320px)
+@media (max-width: 768px)
     .partners__wrap
-        padding: 30px 15px 25px 15px
+        padding: 10px
         grid:
             template-columns: repeat(2, 1fr)
             row-gap: 25px
+
+@media (max-width: 320px)
+    .partners__wrap
+        padding: 30px 15px 25px 15px
