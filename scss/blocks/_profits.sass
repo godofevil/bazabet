@@ -24,11 +24,21 @@
     & svg
         fill: $primary-green
 
-@media (max-width: 320px)
+@media (max-width: 960px)
     .profits__wrap
-        padding: 25px 25px 20px 25px
+        padding: 10px
+        grid:
+            template-columns: repeat(3, 1fr)
+            gap: 5px
+
+@media (max-width: 960px)
+    .profits__wrap
         grid:
             template-columns: auto
             row-gap: 5px
-    .profits__item
-        justify-content: flex-start
+        .profits__item
+            justify-content: flex-start
+
+@media (max-width: 320px)
+    .profits__wrap
+        padding: 25px 25px 20px 25px
