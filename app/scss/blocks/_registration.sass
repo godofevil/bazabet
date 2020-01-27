@@ -1,7 +1,7 @@
 .registration
     padding: 25px 0 30px 0
     background: url('./../img/registration-bg.png') center repeat-y
-        size: cover
+        size: contain
     font-style: italic
     box-sizing: border-box
     &__item
@@ -73,13 +73,8 @@
         grid:
             template-columns: 1fr
             row-gap: 25px
-    .registration__item, .item__text
-        width: 100%
 
 @media (max-width: 320px)
-    .registration
-        background-position: top center
-        background-size: contain
     .item
         &__text
             width: 150px
