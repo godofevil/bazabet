@@ -10,7 +10,7 @@
         &--mobile
             display: none
             color: #fff
-            font-size: 61px
+            font-size: 61px            
         &--1
             font-size: 158px
             filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5))
@@ -34,7 +34,7 @@
     &__promote
         padding: 25px 0 25px 0
         position: relative
-        z-index: 1
+        z-index: 0
         &::after
             position: absolute
             height: 100%
@@ -61,6 +61,18 @@
         &:hover
             background: linear-gradient(180deg, rgba(252,228,161,1) 0%, rgba(241,198,106,1) 70%)
 
+@media (max-width: 1600px)
+    .main__promote
+        z-index: 1
+    .truck
+        z-index: 2
+    .elements .player__center, .elements .ball
+        z-index: 3
+@media (max-width: 1350px)
+    .main__title--mobile
+        display: block
+    .elements .player__1, .elements .player__2
+        top: 37%
 @media (max-width: 1200px)
     .main__wrap
         padding: 40px 15px 40px 15px
@@ -85,17 +97,14 @@
             margin-top: -20px
             &::after
                 background: 0
-        &__title
-            &--mobile
-                display: block
-            &--1
-                font-size: 82px
-                padding-top: 10px
-            &--2
-                font-size: 19px
-                padding-top: 15px
-                padding-bottom: 0
-            &--3
-                font-size: 15px
-            &--4
-                font-size: 18px
+        &__title--1
+            font-size: 82px
+            padding-top: 10px
+        &__title--2
+            font-size: 19px
+            padding-top: 15px
+            padding-bottom: 0
+        &__title--3
+            font-size: 15px
+        &__title--4
+            font-size: 18px
