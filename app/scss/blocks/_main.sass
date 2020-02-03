@@ -1,17 +1,16 @@
 .main
     &__wrap
-        padding: 150px 0 70px 0
+        padding: 50px 0 70px 0
         text-transform: uppercase
         box-sizing: border-box
     &__title
         font-style: italic
         padding: 0
         line-height: .75
-        &--mobile
-            display: none
+        &--bonus
             color: #fff
-            font-size: 61px
-            padding-bottom: 30px        
+            font-size: 118px
+            padding-bottom: 20px
         &--1
             font-size: 158px
             filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5))
@@ -70,8 +69,6 @@
     .elements .player__center, .elements .ball
         z-index: 3
 @media (max-width: 1350px)
-    .main__title--mobile
-        display: block
     .elements .player__1, .elements .player__2
         top: 37%
 @media (max-width: 1200px)
@@ -98,6 +95,9 @@
             margin-top: -20px
             &::after
                 background: 0
+        &__title--bonus
+            font-size: 61px
+            padding-bottom: 10px
         &__title--1
             font-size: 82px
             padding-top: 10px
